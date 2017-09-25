@@ -1,0 +1,88 @@
+.brand-logo{
+    margin-left: 20px;
+}
+.fastmenu {
+    margin-top: 10px;
+    height: 100%;
+}
+.fastmenuh{
+    margin-top: 0px;
+    height: 100%;
+    display: table;
+    margin: 0px;
+}
+.manu{
+    margin-top: 20px;
+}
+/*img{*/
+    /*object-fit: cover;*/
+    /*height: 400px;*/
+/*}*/
+.imgescover{
+
+}
+a:hover{
+    color: pink;
+}
+a:focus{
+    color: #01579b ;
+}
+a:active{
+    color: black;
+}
+.lim:focus{
+    color: #01579b ;
+}
+.lim:hover{
+    color: pink;
+}
+.lim:active{
+    color: black;
+}
+h3{
+    font-size: 30px;
+    color: white;
+}
+.card{
+    margin-top: 10px;
+}
+.card-image{
+}
+@media (max-width:600px){
+    .fastmenu {
+        height: 250px;
+    }
+}
+.cena{
+    font-size: 25px;
+    display: inline;
+}
+.bau{
+    margin: 10px;
+}
+.table-bay{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+}
+.td-img-bay{
+    width: 20%;
+}
+.img-bay{
+    display: inline;
+    width: 65%;
+    border-radius: 10px;
+}
+th{
+    text-align: center;
+    font-size: 19px;
+}
+td{
+    text-align: center;
+    font-size: 19px;
+}
+#dropdown1{
+    width: 250px;
+}
