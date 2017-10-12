@@ -1,88 +1,189 @@
-.brand-logo{
-    margin-left: 20px;
+body{
+    margin: 0;
+    padding: 0;
 }
-.fastmenu {
+.head{
+    width: 100%;
+    height: 88px;
+    border: solid 1px whitesmoke;
+    box-sizing: border-box;
+    z-index: 200;
+    position: fixed;
+    background: #e4f5fe;
+}
+.inviz{
+    width: 100%;
+    height: 80px;
+    background: #e4f5fe;
+    font-family: "Comic Sans MS";
+    text-align: center;
+}
+h2{
+    margin: 0;
+    padding-top: 22px;
+}
+.head-li{
+    display: inline-block;
+    font-family: "Comic Sans MS";
+    padding-left: 145px;
+}
+.head-ul{
+    float: left;
+}
+.head-a{
+     display: inline-block;
+     padding: 10px;
+     font-size: 20px;
+     color: black;
+     font-family: "Comic Sans MS";
+ }
+.head-a:active{
+    color: #ebc4fd;
+    font-family: "Comic Sans MS";
+    text-decoration: none;
+}
+.center-li{
+    margin: 0 auto;
+}
+.shoping{
+    width: 50px;
+    height: 60px;
+    background:url("../images/shop.png") 100% no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    float: right;
+    margin-right: 30px;
     margin-top: 10px;
+}
+.home{
+    position: relative;
+    width: 100%;
+    height: 88vh;
+    background: url("../images/home.jpg") no-repeat;
+    background-size: 100%;
+    background-position-x: center;
+    background-position-y:-450px;
+}
+h1{
+    color: white;
+    text-align: center;
+}
+.backshedow{
+    background: rgba(0, 0, 0, 0.6);
     height: 100%;
 }
-.fastmenuh{
-    margin-top: 0px;
-    height: 100%;
-    display: table;
-    margin: 0px;
+.LogoAndText{
+    position: relative;
+    top:35%;
+    margin: 0 auto;
+    width: 300px;
 }
-.manu{
-    margin-top: 20px;
+.toys{
+    position: relative;
+    width: 100%;
+    height: 88vh;
 }
-/*img{*/
-    /*object-fit: cover;*/
-    /*height: 400px;*/
-/*}*/
-.imgescover{
+.abaut{
+    position: relative;
+    width: 100%;
+    height: 88vh;
+}
+.contacts{
+    position: relative;
+    width: 100%;
+    height: 88vh;
+}
+.footer{
+    width: 100%;
+    height: 200px;
+    background: #a28abf;
+}
+.upShow{
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    background: #ffcee5 url("../images/arrowUpDown.png") no-repeat;
+    background-position: 50%;
+    background-size: 70%;
+    border-radius: 100%;
+    top: 70vh;
+    left: 92%;
+    transform: rotate(180deg);
+}
+.downShow{
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    background: #ffcee5 url("../images/arrowUpDown.png") no-repeat;
+    background-position: 50%;
+    background-size: 70%;
+    border-radius: 100%;
+    top: 85vh;
+    left: 93%;
+}
+.facebookLeft{
+    width: 200px;
+    height: 50px;
+    background: #ebc4fd;
+    top:148px;
+    left:-150px;
+    position: fixed;
+    z-index: 200;
+    transition: 0.4s;
 
 }
-a:hover{
-    color: pink;
-}
-a:focus{
-    color: #01579b ;
-}
-a:active{
-    color: black;
-}
-.lim:focus{
-    color: #01579b ;
-}
-.lim:hover{
-    color: pink;
-}
-.lim:active{
-    color: black;
-}
-h3{
-    font-size: 30px;
-    color: white;
-}
-.card{
-    margin-top: 10px;
-}
-.card-image{
-}
-@media (max-width:600px){
-    .fastmenu {
-        height: 250px;
-    }
-}
-.cena{
-    font-size: 25px;
-    display: inline;
-}
-.bau{
-    margin: 10px;
-}
-.table-bay{
-    margin-top: 30px;
-    margin-bottom: 30px;
-    color: white;
+.facebookLeftP{
+    font-family: "Comic Sans MS";
     text-align: center;
-    border-radius: 10px;
+    font-size: 20px;
+    float: left;
+    padding-top: 10px;
+    padding-left: 30px;
+
 }
-.td-img-bay{
-    width: 20%;
+.instaLeft{
+    width: 200px;
+    height: 50px;
+    background: #ebc4fd;
+    top:200px;
+    left:-150px;
+    position: fixed;
+    z-index: 200;
+    transition: 0.4s;
 }
-.img-bay{
-    display: inline;
-    width: 65%;
-    border-radius: 10px;
-}
-th{
+.instaLeftP{
+    font-family: "Comic Sans MS";
     text-align: center;
-    font-size: 19px;
+    font-size: 20px;
+    float: left;
+    padding-top: 10px;
+    padding-left: 30px;
 }
-td{
-    text-align: center;
-    font-size: 19px;
+.facebookLeft:hover{
+    left:0px;
 }
-#dropdown1{
-    width: 250px;
+.instaLeft:hover{
+    left:0px;
 }
+.logoF{
+    width: 50px;
+    height: 50px;
+    background: url("../images/logoF.png") no-repeat;
+    background-size: 75% 75%;
+    background-position: center;
+    float: right;
+}
+.logoI{
+    width: 50px;
+    height: 50px;
+    background: url("../images/logoI.png") no-repeat;
+    background-size: 75% 75%;
+    background-position: center;
+    float: right;
+}
+/*color*/
+/*background: #e4f5fe;*/
+/*background: #ffcee5;*/
+/*background: #fdffde;*/
+/*background: #ebc4fd;*/
+/*background: #a28abf*/
