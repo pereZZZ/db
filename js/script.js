@@ -26,21 +26,29 @@ $(function () {
     function addtoys(str) {
         for(var i=0; i<str.length; i++){
             var CardBlock=document.createElement('div');
-            CardBlock.classList.add('CardBlock');
-            var div=document.createElement('div');
+            var CardBlockShowe=document.createElement('div');
             var nametoys=document.createElement('h3');
+            var text=document.createElement('p');
+            var price=document.createElement('p');
+            text.classList.add('TextToys');
+            text.innerHTML=str[i].volume;
+            price.classList.add('PriceToys');
+            price.innerHTML=str[i].cena;
+            CardBlock.classList.add('CardBlock');
+            CardBlockShowe.classList.add('CardBlockShowe');
             nametoys.classList.add('NameToys');
             nametoys.innerHTML=str[i].name;
-            div.classList.add('ToyssShopDiv');
-            div.style.background="url('images/"+str[i].img+"') no-repeat";
-            div.style.backgroundSize="100%";
+            CardBlock.classList.add('ToyssShopDiv');
+            CardBlock.style.background="url('images/"+str[i].img+"') no-repeat";
+            CardBlock.style.backgroundSize="100%";
             $(".shop").append(CardBlock);
-            $(".CardBlock").eq(i).append(nametoys);
-            $(".CardBlock").eq(i).append(div);
+            $(".CardBlock").eq(i).append(CardBlockShowe);
+            $(".CardBlockShowe").eq(i).append(nametoys);
+            $(".CardBlockShowe").eq(i).append(text);
+            $(".CardBlockShowe").eq(i).append(price);
         }
     }
-
-
+    
     // move home img
     $(document).on('scroll',function (event) {
         var proc=-450;
