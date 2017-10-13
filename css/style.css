@@ -181,6 +181,48 @@ h1{
     background-position: center;
     float: right;
 }
+.facebookLeft-a{
+    color: black;
+}
+.instaLeft-a{
+    color: black;
+    text-decoration: underline;
+}
+.facebookLeft-a:active{
+    color: #e4f5fe;
+    font-family: "Comic Sans MS";
+    text-decoration: none;
+}
+.instaLeft-a:active{
+    color: #e4f5fe;
+    font-family: "Comic Sans MS";
+    text-decoration: none;
+}
+.wrapForText{
+    text-align: justify;
+    margin: 10% auto;
+    width: 60%;
+    height: 60%;
+}
+.shop{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+.ToyssShopDiv{
+    width: 100%;
+    height: 48%;
+    border: solid 1px;
+    float: left;
+    background-size: contain;
+}
+.CardBlock{
+    width: 30%;
+    height: 48%;
+    border: solid 1px;
+    float: left;
+    background-size: contain;
+}
 /*color*/
 /*background: #e4f5fe;*/
 /*background: #ffcee5;*/
