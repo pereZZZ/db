@@ -55,6 +55,16 @@ h2{
     margin-right: 30px;
     margin-top: 10px;
 }
+.shopcart{
+    width: 50px;
+    height: 60px;
+    background:url("../images/shopcart.png") 100% no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    float: right;
+    margin-right: 30px;
+    margin-top: 10px;
+}
 .home{
     position: relative;
     width: 100%;
@@ -81,7 +91,7 @@ h1{
 .toys{
     position: relative;
     width: 100%;
-    height: 88vh;
+    height: 150vh;
 }
 .abaut{
     position: relative;
@@ -255,6 +265,11 @@ h1{
     top: -3px;
     height: 100%;
     opacity: 1;
+}
+.OpenMainShop{
+    margin-top: 20px;
+    text-align: center;
+    height: 20px;
 }
 /*color*/
 /*background: #e4f5fe;*/
