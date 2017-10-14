@@ -22,6 +22,13 @@ $(function () {
     // });
     //
 
+    $('a[href*="#"]').click(function() {
+        $page.animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 400);
+        return false;
+    });
+
     //toys add block
     function addtoys(str) {
         for(var i=0; i<str.length; i++){
@@ -58,7 +65,9 @@ $(function () {
     });
 
     // button ud and down
+
     $(document).on('scroll',function (event) {
+
         // console.log($(window).scrollTop());
         if($(window).scrollTop() > 0 && $(window).scrollTop() < height-80 ) {
             $('a[href="#home"]').css('text-decoration', 'underline');
@@ -86,13 +95,20 @@ $(function () {
                 $("#downDiv").attr('href','#endmain');
                 $('a[href="#abaut"]').css('text-decoration', 'none');
                 $('a[href="#contacts"]').css('text-decoration','underline');
+                $(".downDiv").removeClass("downShow");
             }
         }
         if($(window).scrollTop()<height-80){
             $(".upDiv").removeClass("upShow");
             $(".downDiv").removeClass("downShow");
         }
+    });
+    var $page = $('html, body');
 
-
+    $('a[href*="#"]').click(function() {
+        $page.animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 400);
+        return false;
     });
 });
