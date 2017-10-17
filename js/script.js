@@ -72,25 +72,25 @@ $(function () {
                 $('a[href="#toys"]').css('text-decoration', 'none');
             }
             if ($(window).scrollTop() > height - 80 && $(window).scrollTop() < height * 4) {
-                $(".upDiv").addClass("upShow");
-                $(".downDiv").addClass("downShow");
+                // $(".upDiv").addClass("upShow");
+                // $(".downDiv").addClass("downShow");
                 if ($(window).scrollTop() > height - 80 && $(window).scrollTop() < height * 2 - 80) {
-                    $("#upDiv").attr('href', '#home');
-                    $("#downDiv").attr('href', '#abaut');
+                    // $("#upDiv").attr('href', '#home');
+                    // $("#downDiv").attr('href', '#abaut');
                     $('a[href="#home"]').css('text-decoration', 'none');
                     $('a[href="#toys"]').css('text-decoration', 'underline');
                     $('a[href="#abaut"]').css('text-decoration', 'none');
                 }
                 if ($(window).scrollTop() > height * 2 - 80 && $(window).scrollTop() < height * 3 - 80) {
-                    $("#upDiv").attr('href', '#toys');
-                    $("#downDiv").attr('href', '#contacts');
+                    // $("#upDiv").attr('href', '#toys');
+                    // $("#downDiv").attr('href', '#contacts');
                     $('a[href="#toys"]').css('text-decoration', 'none');
                     $('a[href="#abaut"]').css('text-decoration', 'underline');
                     $('a[href="#contacts"]').css('text-decoration', 'none');
                 }
                 if ($(window).scrollTop() > height * 3 - 80) {
-                    $("#upDiv").attr('href', '#abaut');
-                    $("#downDiv").attr('href', '#endmain');
+                    // $("#upDiv").attr('href', '#abaut');
+                    // $("#downDiv").attr('href', '#endmain');
                     $('a[href="#abaut"]').css('text-decoration', 'none');
                     $('a[href="#contacts"]').css('text-decoration', 'underline');
                     $(".downDiv").removeClass("downShow");
@@ -160,8 +160,8 @@ $(function () {
         },'slowe');
         $(".footer").css("margin-top","33vh");
         $(".head").css("margin-top","-9px");
-        $(".upDiv").removeClass("upShow");
-        $(".downDiv").removeClass("downShow");
+        // $(".upDiv").removeClass("upShow");
+        // $(".downDiv").removeClass("downShow");
         buttonUpDown=1;
 
         createShopNav();
@@ -195,8 +195,8 @@ $(function () {
         $(".endfooterP").css("padding","0px");
         $(".head").css("margin-top","0px");
         buttonUpDown=0;
-        $(".upDiv").addClass("upShow");
-        $(".downDiv").addClass("downShow");
+        // $(".upDiv").addClass("upShow");
+        // $(".downDiv").addClass("downShow");
         $(".footer").css("margin-top","0vh");
     }
     //Add all shop content
