@@ -7,10 +7,10 @@ $(function () {
     var str = [
         {img:"1.jpg", name:"toys1", volume:"bla bla bla1", cena:"11usd", top:true, colection:"toys"},
         {img:"2.jpg", name:"toys2", volume:"bla bla bla2", cena:"12usd", top:true, colection:"pillow"},
-        {img:"3.jpg", name:"toys3", volume:"bla bla bla3", cena:"13usd", top:true, colection:"pillow"},
+        {img:"3.jpg", name:"toys3", volume:"bla bla bla3", cena:"13usd", top:true, colection:"word"},
         {img:"1.jpg", name:"toys1", volume:"bla bla bla1", cena:"11usd", top:true, colection:"toys"},
         {img:"2.jpg", name:"toys2", volume:"bla bla bla2", cena:"12usd", top:true, colection:"pillow"},
-        {img:"3.jpg", name:"toys3", volume:"bla bla bla3", cena:"13usd", top:true, colection:"pillow"}
+        {img:"3.jpg", name:"toys3", volume:"bla bla bla3", cena:"13usd", top:true, colection:"word"}
         ];
     var strtols=JSON.stringify(str);
     localStorage.setItem('toys',strtols);
@@ -54,7 +54,7 @@ $(function () {
             }
         }
     }
-    
+
     // move home img
     $(document).on('scroll',function (event) {
         var proc=-450;
@@ -158,10 +158,13 @@ $(function () {
             height:"0px",
             opacity:"0"
         },'slowe');
+        $(".footer").css("margin-top","33vh");
         $(".head").css("margin-top","-9px");
         $(".upDiv").removeClass("upShow");
         $(".downDiv").removeClass("downShow");
         buttonUpDown=1;
+
+        createShopNav();
     }
     //fun howe close my shop
     function CloseAllShop() {
@@ -194,10 +197,19 @@ $(function () {
         buttonUpDown=0;
         $(".upDiv").addClass("upShow");
         $(".downDiv").addClass("downShow");
+        $(".footer").css("margin-top","0vh");
     }
     //Add all shop content
     function AddContentToShop() {
         for(var i=0; i<str.length; i++){
         }
+    }
+
+    function createShopNav() {
+        var namecont=[];
+        var x;
+        for(var i=0; i<str.length; i++) {
+        }
+        console.log(namecont);
     }
 });
