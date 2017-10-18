@@ -163,9 +163,11 @@ $(function () {
         // $(".upDiv").removeClass("upShow");
         // $(".downDiv").removeClass("downShow");
         buttonUpDown=1;
-
         createShopNav();
     }
+
+
+
     //fun howe close my shop
     function CloseAllShop() {
         $(".home").animate({
@@ -206,10 +208,22 @@ $(function () {
     }
 
     function createShopNav() {
-        var namecont=[];
-        var x;
-        for(var i=0; i<str.length; i++) {
+        var namecont={};
+        for (var i = 0; i < str.length; i++) {
+            var x = str[i].colection;
+            namecont[x] = true; // запомнить строку в виде свойства объекта
         }
+        namecont=Object.keys(namecont);
         console.log(namecont);
+        var ul=document.createElement("ul");
+        ul.classList.add("head-lu");
+        $('.center-li').prepend(ul);
+        for(var i=0; i<namecont.length; i++) {
+            var li=document.createElement('li');
+            li.classList.add('head-li');
+            $('.head-li').text(namecont[i]);
+            $(".head-lu").append(li);
+            // $(".center-li").
+        }
     }
 });

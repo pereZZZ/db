@@ -61,7 +61,7 @@ h2{
 .shopcart{
     width: 50px;
     height: 60px;
-    background:url("../images/shopcart.png") 100% no-repeat;
+    background: url("../images/shopcart.png") 100% no-repeat;
     background-size: 100%;
     display: inline-block;
     float: right;
