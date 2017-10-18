@@ -127,6 +127,7 @@ $(function () {
             $(".head-li").animate({paddingleft:'90px'},"slow");
             $(".head-ul").animate({left:'0'},'slow');
             $(".OpenBackNav").remove();
+            $(".head-ul-shop").remove();
             CloseAllShop();
         });
         OpenAllShop();
@@ -160,6 +161,11 @@ $(function () {
         },'slowe');
         $(".footer").css("margin-top","33vh");
         $(".head").css("margin-top","-9px");
+        $(".wrapForText").css({
+            height:"0px",
+            opacity:"0"
+        },'slowe');
+        $(".CardBlock").remove();
         // $(".upDiv").removeClass("upShow");
         // $(".downDiv").removeClass("downShow");
         buttonUpDown=1;
@@ -200,6 +206,11 @@ $(function () {
         // $(".upDiv").addClass("upShow");
         // $(".downDiv").addClass("downShow");
         $(".footer").css("margin-top","0vh");
+        $(".wrapForText").css({
+            height:"88vh",
+            opacity:"1"
+        },'slowe');
+        addtoys(str);
     }
     //Add all shop content
     function AddContentToShop() {
@@ -207,23 +218,23 @@ $(function () {
         }
     }
 
-    // function createShopNav() {
-    //     var namecont={};
-    //     for (var i = 0; i < str.length; i++) {
-    //         var x = str[i].colection;
-    //         namecont[x] = true; // запомнить строку в виде свойства объекта
-    //     }
-    //     namecont=Object.keys(namecont);
-    //     console.log(namecont);
-    //     var ul=document.createElement("ul");
-    //     ul.classList.add("head-lu");
-    //     $('.center-li').prepend(ul);
-    //     for(var i=0; i<namecont.length; i++) {
-    //         var li=document.createElement('li');
-    //         li.classList.add('head-li');
-    //         $('.head-li').text(namecont[i]);
-    //         $(".head-lu").append(li);
-    //         // $(".center-li").
-    //     }
-    // }
+    function createShopNav() {
+        var namecont={};
+        for (var i = 0; i < str.length; i++) {
+            var x = str[i].colection;
+            namecont[x] = true; // запомнить строку в виде свойства объекта
+        }
+        namecont=Object.keys(namecont);
+        console.log(namecont);
+        namecont.unshift("all");
+        var ul=document.createElement("ul");
+        ul.classList.add("head-ul-shop");
+        $('.center-li').prepend(ul);
+        for(var i=0; i<namecont.length; i++) {
+            var li=document.createElement('li');
+            li.classList.add('head-li');
+            $(".head-ul-shop").append(li);
+            $('.head-li').eq(i).html("<a class='head-a' href='#"+namecont[i]+"'>"+namecont[i]+"</a>");
+        }
+    }
 });
