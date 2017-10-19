@@ -169,10 +169,8 @@ $(function () {
         // $(".upDiv").removeClass("upShow");
         // $(".downDiv").removeClass("downShow");
         buttonUpDown=1;
-        createShopNav();
+        setTimeout(createShopNav, 1000);
     }
-
-
 
     //fun howe close my shop
     function CloseAllShop() {
@@ -207,7 +205,7 @@ $(function () {
         // $(".downDiv").addClass("downShow");
         $(".footer").css("margin-top","0vh");
         $(".wrapForText").css({
-            height:"88vh",
+            height:"58vh",
             opacity:"1"
         },'slowe');
         addtoys(str);
