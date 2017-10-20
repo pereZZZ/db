@@ -1,7 +1,6 @@
 $(function () {
     var buttonUpDown=0;
-
-
+    
     localStorage.clear();
     var height = document.documentElement.clientHeight;
     var str = [
@@ -12,12 +11,21 @@ $(function () {
         {img:"2.jpg", name:"toys2", volume:"bla bla bla2", cena:"12usd", top:true, colection:"pillow"},
         {img:"3.jpg", name:"toys3", volume:"bla bla bla3", cena:"13usd", top:true, colection:"word"}
         ];
+    var str2 = [
+        {img:"1.jpg", name:"toys1", volume:"bla bla bla1", cena:"11usd", top:true, colection:"toys"},
+        {img:"2.jpg", name:"toys2", volume:"bla bla bla2", cena:"12usd", top:true, colection:"pillow"},
+        {img:"3.jpg", name:"toys3", volume:"bla bla bla3", cena:"13usd", top:true, colection:"word"},
+        {img:"1.jpg", name:"toys1", volume:"bla bla bla1", cena:"11usd", top:true, colection:"toys"},
+        {img:"2.jpg", name:"toys2", volume:"bla bla bla2", cena:"12usd", top:true, colection:"pillow"},
+        {img:"3.jpg", name:"toys3", volume:"bla bla bla3", cena:"13usd", top:true, colection:"word"}
+    ];
     var strtols=JSON.stringify(str);
     localStorage.setItem('toys',strtols);
     var strgetls=localStorage.getItem('toys');
     str=JSON.parse(strgetls);
     // console.log(str);
     addtoys(str);
+    slidefoto(str2);
 
     $('a[href*="#"]').click(function() {
         $page.animate({
@@ -133,6 +141,7 @@ $(function () {
         OpenAllShop();
         AddContentToShop();
     });
+    
     //fun howe open my shop
     function OpenAllShop() {
         $(".home").animate({
@@ -169,7 +178,8 @@ $(function () {
         // $(".upDiv").removeClass("upShow");
         // $(".downDiv").removeClass("downShow");
         buttonUpDown=1;
-        setTimeout(createShopNav, 1000);
+        setTimeout(createShopNav, 500);
+        // addshopcontent(str);
     }
 
     //fun howe close my shop
@@ -210,12 +220,14 @@ $(function () {
         },'slowe');
         addtoys(str);
     }
+    
     //Add all shop content
     function AddContentToShop() {
         for(var i=0; i<str.length; i++){
         }
     }
 
+    //add nav for shop
     function createShopNav() {
         var namecont={};
         for (var i = 0; i < str.length; i++) {
@@ -233,6 +245,40 @@ $(function () {
             li.classList.add('head-li');
             $(".head-ul-shop").append(li);
             $('.head-li').eq(i).html("<a class='head-a' href='#"+namecont[i]+"'>"+namecont[i]+"</a>");
+        }
+    }
+    
+    //slider foto
+    function slidefoto(str2) {
+        
+    }
+    
+    //content to shop
+    function addshopcontent(str) {
+        for(var i=0; i<str.length; i++){
+            if(str[i].top==true) {
+                var CardBlock = document.createElement('div');
+                var CardBlockShowe = document.createElement('div');
+                var nametoys = document.createElement('h3');
+                var text = document.createElement('p');
+                var price = document.createElement('p');
+                text.classList.add('TextToys');
+                text.innerHTML = str[i].volume;
+                price.classList.add('PriceToys');
+                price.innerHTML = str[i].cena;
+                CardBlock.classList.add('CardBlock');
+                CardBlockShowe.classList.add('CardBlockShowe');
+                nametoys.classList.add('NameToys');
+                nametoys.innerHTML = str[i].name;
+                CardBlock.classList.add('ToyssShopDiv');
+                CardBlock.style.background = "url('images/" + str[i].img + "') no-repeat";
+                CardBlock.style.backgroundSize = "100%";
+                $(".shop").append(CardBlock);
+                $(".CardBlock").eq(i).append(CardBlockShowe);
+                $(".CardBlockShowe").eq(i).append(nametoys);
+                $(".CardBlockShowe").eq(i).append(text);
+                $(".CardBlockShowe").eq(i).append(price);
+            }
         }
     }
 });
